@@ -1,0 +1,114 @@
+/*
+  --- 01 Typography System
+  -Font Size(px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  
+  
+  -Font Family
+  Google Font :
+  default : sans-serif
+  
+  -Font Weight
+  default : 400
+  heading-primary : 700
+  
+  -Line Height
+  default : 1
+  heading-primary : 1.1
+  
+  --- 02 Color
+  -Primary : ;
+  -Tints : ,
+  -Shades : ,
+  -Accents
+  -Grays : ;
+  
+  --- 03 Shadow
+  
+  --- 04 Border Radius
+  default : 9px;
+  
+  -Spacing System(px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+  */
+
+:root {
+  --card-bg: #d1d5db;
+  --main-bg: #f3f4f6;
+  --text-gray: #9ca3af;
+  --text: #030712;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /*Font-size => 10 */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  position: relative;
+  background-color: var(--main-bg);
+}
+.header {
+  padding: 2.4rem 3.2rem;
+}
+.site-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+.site-desc {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 3.2rem;
+}
+
+/* Product Card */
+.card-link {
+  text-decoration: none;
+  color: var(--text);
+}
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+.product-card {
+  padding: 1.6rem;
+  background-color: var(--card-bg);
+}
+.product-img {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+.product-img img {
+  width: 100%;
+  height: auto;
+}
+.product-info ul {
+  list-style: none;
+}
+.product-info ul li {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 1.2rem;
+  padding-bottom: 0.8rem;
+}
+.product-info ul li span:first-child {
+  width: 30%;
+}
+.product-info ul li i {
+  color: blue;
+}
