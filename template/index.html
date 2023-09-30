@@ -20,7 +20,99 @@
       referrerpolicy="no-referrer"
     />
     <!-- Custom Link -->
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <style>
+      :root {
+        --card-bg: #d1d5db;
+        --main-bg: #f3f4f6;
+        --text-gray: #9ca3af;
+        --text: #030712;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        /*Font-size => 10 */
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        color: var(--text);
+        line-height: 1;
+      }
+      .container {
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 0 3.2rem;
+        position: relative;
+        background-color: var(--main-bg);
+      }
+      .header {
+        padding: 2.4rem 3.2rem;
+      }
+      .site-title {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2.4rem;
+      }
+      .site-desc {
+        font-size: 1.8rem;
+        text-align: center;
+        line-height: 3.2rem;
+      }
+
+      /* Product Card */
+      .card-link {
+        text-decoration: none;
+        color: var(--text);
+      }
+      .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1.2rem;
+      }
+      .product-card {
+        padding: 1.6rem;
+        background-color: var(--card-bg);
+      }
+      .product-img {
+        width: 100%;
+        margin-bottom: 1.6rem;
+      }
+      .product-img img {
+        width: 100%;
+        height: auto;
+      }
+      .product-info ul {
+        list-style: none;
+      }
+      .product-info ul li {
+        font-size: 1.4rem;
+        display: flex;
+        gap: 1.2rem;
+        padding-bottom: 0.8rem;
+      }
+      .product-info ul li span:first-child {
+        width: 30%;
+      }
+      .product-info ul li i {
+        color: blue;
+      }
+      .btn {
+        background-color: blue;
+        color: white;
+        font-size: 1.4rem;
+        text-decoration: none;
+        padding: 0.8rem 1.6rem;
+        display: inline-block;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -33,288 +125,7 @@
           dolorem id.
         </p>
       </section>
-      <section class="product">
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="card-link">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="../dev-data/img/eg-product.jpeg" alt="" />
-            </div>
-            <div class="product-info">
-              <ul>
-                <li>
-                  <span>Rating</span>
-                  <span
-                    >: <i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                </li>
-                <li>
-                  <span>Name</span>
-                  <span>: Test Product</span>
-                </li>
-                <li>
-                  <span>Price</span>
-                  <span>: $500</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-      </section>
+      <section class="product"></section>
     </div>
   </body>
 </html>
