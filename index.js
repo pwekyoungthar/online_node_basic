@@ -1,6 +1,8 @@
 const http = require("http");
 const fs = require("fs");
 
+const replaceTemplage = require("./ownmodules/replaceTemplage");
+
 // Read API Data
 const apiData = fs.readFileSync(`${__dirname}/dev-data/products.json`, "utf-8");
 const dataObj = JSON.parse(apiData);
@@ -11,13 +13,19 @@ const templateHome = fs.readFileSync(
   "utf-8"
 );
 
+const cardTemp = fs.readFileSync(`${__dirname}/template/card.html`, "utf-8");
+
 const server = http.createServer((request, response) => {
   const pathName = request.url;
   if (pathName === "/" || pathName === "/home") {
     response.writeHead(200, {
       "Content-type": "text/html",
     });
-    response.end(templateHome);
+    const cardHTML = dataObj
+      .map((el) => replaceTemplage(cardTemp, el))
+      .join("");
+    const output = templateHome.replace(/{%CARDS%}/g, cardHTML);
+    response.end(output);
   } else if (pathName === "/api") {
     response.writeHead(200, {
       "Content-type": "application/json",

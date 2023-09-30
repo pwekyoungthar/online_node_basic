@@ -1,9 +1,6 @@
 <div class="product-card">
   <div class="product-img">
-    <img
-      src="https://cdn.anscommerce.com/catalog/brandstore/johnson/17_7_20/Sale.jpg"
-      alt=""
-    />
+    <img src="{%PRODUCTIMAGE%}" alt="" />
   </div>
   <div class="product-info">
     <ul>
@@ -16,13 +13,13 @@
       </li>
       <li>
         <span>Name</span>
-        <span>: Test Product</span>
+        <span>: {%PRODUCTNAME%}</span>
       </li>
       <li>
         <span>Price</span>
-        <span>: $500</span>
+        <span>: ${%PRICE%}</span>
       </li>
     </ul>
   </div>
-  <a href="#" class="btn">More Detail</a>
+  <a href="/product?id={%ID%}" class="btn">More Detail</a>
 </div>
