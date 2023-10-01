@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const url = require("url");
 
 const replaceTemplage = require("./ownmodules/replaceTemplage");
 
@@ -12,12 +13,17 @@ const templateHome = fs.readFileSync(
   `${__dirname}/template/index.html`,
   "utf-8"
 );
-
 const cardTemp = fs.readFileSync(`${__dirname}/template/card.html`, "utf-8");
+const singleProductTemp = fs.readFileSync(
+  `${__dirname}/template/single_product.html`,
+  "utf-8"
+);
 
 const server = http.createServer((request, response) => {
-  const pathName = request.url;
-  if (pathName === "/" || pathName === "/home") {
+  // const pathName = request.url;
+  const { query, pathname } = url.parse(request.url, true);
+
+  if (pathname === "/" || pathname === "/home") {
     response.writeHead(200, {
       "Content-type": "text/html",
     });
@@ -26,13 +32,18 @@ const server = http.createServer((request, response) => {
       .join("");
     const output = templateHome.replace(/{%CARDS%}/g, cardHTML);
     response.end(output);
-  } else if (pathName === "/api") {
+  } else if (pathname === "/api") {
     response.writeHead(200, {
       "Content-type": "application/json",
     });
     response.end(apiData);
-  } else if (pathName === "/product") {
-    response.end("This is Product Page");
+  } else if (pathname === "/product") {
+    response.writeHead(200, {
+      "Content-type": "text/html",
+    });
+    const singleData = dataObj[query.id];
+    const output = replaceTemplage(singleProductTemp, singleData);
+    response.end(output);
   } else {
     response.writeHead(404, {
       "Content-type": "text/html",

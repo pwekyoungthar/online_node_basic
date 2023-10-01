@@ -3,6 +3,6 @@ module.exports = (temp, repVal) => {
   output = output.replace(/{%PRODUCTNAME%}/g, repVal.title);
   output = output.replace(/{%PRICE%}/g, repVal.price);
   output = output.replace(/{%ID%}/g, repVal.id);
-
+  output = output.replace(/{%DESCRIPTION%}/g, repVal.description);
   return output;
 };
